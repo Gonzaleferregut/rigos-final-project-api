@@ -10,7 +10,7 @@ app.get('/', (req, resp) => {
 
 })
 
-app.get('/people/tyler', (req, resp) => {
+app.get('/people', (req, resp) => {
 
   return resp.json({
     name: 'Tyler',
@@ -20,9 +20,10 @@ app.get('/people/tyler', (req, resp) => {
 })
 
 
-app.post('/people', (req, resp) => {
-  const person = req.body
-  return resp.json(person)
+app.post('/contact', (req, resp) => {
+  const contactData = req.body
+  console.log(contactData)
+  return resp.json(contactData)
 })
 
 
