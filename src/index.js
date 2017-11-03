@@ -8,18 +8,14 @@ app.use(Parser.json())
 app.use(cors())
 
 app.get('/', (req, resp) => {
-
   return resp.send('Hey, Tyler')
-
 })
 
 app.get('/people', (req, resp) => {
-
   return resp.json({
     name: 'Tyler',
     age: 35
   })
-
 })
 
 app.post('/logIn', (req, resp) => {
