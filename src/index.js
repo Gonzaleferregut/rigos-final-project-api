@@ -1,8 +1,9 @@
 import Express from 'express'
 import Parser from 'body-parser'
+import cors from 'cors'
 
 const app = new Express()
-var cors = require('cors')
+
 app.use(Parser.json())
 app.use(cors())
 
@@ -21,6 +22,11 @@ app.get('/people', (req, resp) => {
 
 })
 
+app.post('/logIn', (req, resp) => {
+  const logInData = req.body
+  console.log(logInData)
+  return resp.json(logInData)
+})
 
 app.post('/contact', (req, resp) => {
   const contactData = req.body
