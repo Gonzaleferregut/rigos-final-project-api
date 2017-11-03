@@ -2,7 +2,9 @@ import Express from 'express'
 import Parser from 'body-parser'
 
 const app = new Express()
+var cors = require('cors')
 app.use(Parser.json())
+app.use(cors())
 
 app.get('/', (req, resp) => {
 
