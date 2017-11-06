@@ -30,5 +30,10 @@ app.post('/contact', (req, resp) => {
   return resp.json(contactData)
 })
 
+app.post('/personalInfo', (req, resp) => {
+  const personalData = req.body
+  console.log(personalData)
+  return resp.json(personalData)
+})
 
 app.listen(4000)
